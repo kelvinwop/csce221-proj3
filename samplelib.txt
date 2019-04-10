@@ -1,0 +1,15 @@
+Title: bignuggets
+Artist: yodawg
+Album: foodgrade
+Genre: hardrock
+Year: 2020
+Title: smallburger
+Artist: yodawg
+Album: foodgrade
+Genre: hardrock
+Year: 2020
+Title: hailvictory
+Artist: xurious
+Album: unknown
+Genre: trumpwave
+Year: 2016

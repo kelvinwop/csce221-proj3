@@ -11,6 +11,7 @@
 #include "TitleCompare.h"
 
 #define EXPECTED_ARGC 2
+#define DEBUG 1
 
 /* Print the given song to stdout */
 void printSong(Song *song)

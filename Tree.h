@@ -65,11 +65,11 @@ public:
     iterator end();
 
     /* Return an iterator pointing to the first item in the tree equal to key */
-    template <typename DataType>
+    template <typename KeyType>
     iterator find_first(KeyType key);
 
     /* Return an iterator pointing to the last item in the tree equal to key */
-    template <typename DataType>
+    template <typename KeyType>
     iterator find_last(KeyType key);
 
     /* 
@@ -81,9 +81,16 @@ public:
     std::pair<iterator, iterator> find_range(KeyType key);
 
     /* Level order print of the tree */
-    template <typename DataType, typename Compare>
+    template <typename DataType_, typename Compare_>
     friend std::ostream &operator<<(std::ostream &stream,
                                     const Tree<DataType_, Compare_> &tree);
+
+    Node<DataType> copy_node(Node<DataType>* other, Node<DataType>* parent);
+    void Tree<DataType, Compare>::delete_node(Node<DataType>* other);
+
+protected:
+    Node<DataType>* root;
+    int tree_size;
 };
 
 /* Tree iterator that performs in-order traversals */
@@ -115,6 +122,10 @@ public:
 
     /* Advance to the current data's successor */
     iterator operator++(int unused);
+
+protected:
+    Node<DataType>* cur_point;
+    int key_num;
 };
 
 #include "Tree.cpp"

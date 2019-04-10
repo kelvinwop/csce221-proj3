@@ -8,13 +8,14 @@
 template <typename DataType, typename Compare>
 Tree<DataType, Compare>::Tree()
 {
-    /* Your code here... */    
+    root = nullptr;
+    tree_size = 0;
 }
 
 template <typename DataType, typename Compare>
 Tree<DataType, Compare>::Tree(const Tree<DataType, Compare> &other)
 {
-    /* Your code here... */    
+    root = copy_node(other)
 }
 
 template <typename DataType, typename Compare>
@@ -33,7 +34,9 @@ Tree<DataType, Compare>::~Tree()
 template <typename DataType, typename Compare>
 void Tree<DataType, Compare>::insert(DataType data)
 {
-    /* Your code here... */    
+    ++tree_size;
+
+    // TODO: implement
 }
 
 template <typename DataType, typename Compare>
@@ -47,7 +50,7 @@ template <typename DataType, typename Compare>
 size_t Tree<DataType, Compare>::size() const
 {
     /* Your code here... */    
-    return 0;
+    return tree_size;
 }
 
 template <typename DataType, typename Compare>
@@ -99,5 +102,42 @@ std::ostream &operator<<(std::ostream &stream,
     /* Your code here... */
     return stream;
 }
+
+template <typename DataType, typename Compare>
+Node<DataType> Tree<DataType, Compare>::copy_node(Node<DataType>* other, Node<DataType>* parent)
+{
+    if (other == nullptr)
+    {
+        return nullptr;
+    }
+
+    Node<DataType>* out = new Node<DataType> {
+        nullptr,
+        nullptr,
+        nullptr,
+        &parent,
+        other.value1,
+        other.value2,
+        other.keys
+    };
+    out.left = copy_node(other.left, out);
+    out.middle = copy_node(other.middle, out);
+    out.right = copy_node(other.right, out);
+    return out;
+}
+
+template <typename DataType, typename Compare>
+void Tree<DataType, Compare>::delete_node(Node<DataType>* other)
+{
+    if (other == nullptr)
+    {
+        return;
+    }
+    delete_node(other->left);
+    delete_node(other->middle);
+    delete_node(other->right);
+    delete other;
+}
+
 
 #endif

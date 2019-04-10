@@ -5,7 +5,13 @@
 template <typename DataType>
 struct Node
 {
-    /* Your members/methods here... */
+    Node<DataType>* left;
+    Node<DataType>* middle;
+    Node<DataType>* right;
+    Node<DataType>* parent;
+    DataType value1;
+    DataType value2;
+    int keys;  // 1 is a two-tree, 2 is a three-tree
 };
 
 #endif
