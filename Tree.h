@@ -110,7 +110,7 @@ public:
     iterator(const iterator &other);
 
     // very very bad i think
-    iterator(Node<DataType>* elem, int idx);
+    iterator(const Tree<DataType, Compare>* tree);
 
     /* Copy assignment */
     iterator &operator=(const iterator &other);
@@ -133,11 +133,14 @@ public:
     iterator &endify();
     iterator &startify();
     iterator &lastify();
-protected:
+    static Node<DataType>* get_leftmost(Node<DataType>* cur);
+    static Node<DataType>* get_rightmost(Node<DataType>* cur);
+
+    
+    // originally made these protected, but it seems we need them?? more like a struct I suppose
     Node<DataType>* cur_point;
     int key_num;
-    Node<DataType>* get_leftmost(Node<DataType>* cur);
-    Node<DataType>* get_rightmost(Node<DataType>* cur);
+    const Tree<DataType, Compare>* m_tree;
 };
 
 #include "Tree.cpp"

@@ -4,7 +4,6 @@
 
 #ifndef TREE_CPP
 #define TREE_CPP
-#define DEBUG
 
 /* Stubs for the tree's methods */
 
@@ -413,15 +412,16 @@ size_t Tree<DataType, Compare>::size() const
 template <typename DataType, typename Compare>
 typename Tree<DataType, Compare>::iterator Tree<DataType, Compare>::begin()
 {
-    /* Your code here... */    
-    return iterator().startify();
+    typename Tree<DataType, Compare>::iterator it;
+    it.cur_point = iterator::get_leftmost(this->root);
+    it.key_num = 1;
+    return it;
 }
 
 template <typename DataType, typename Compare>
 typename Tree<DataType, Compare>::iterator Tree<DataType, Compare>::end()
 {
-    /* Your code here... */    
-    return iterator().endify();
+    return typename Tree<DataType, Compare>::iterator();
 }
 
 template <typename DataType, typename Compare>

@@ -19,13 +19,6 @@ Tree<DataType, Compare>::iterator::iterator(const iterator &other)
 }
 
 template <typename DataType, typename Compare>
-Tree<DataType, Compare>::iterator::iterator(Node<DataType>* elem, int idx)
-{
-    this->cur_point = elem;
-    this->key_num = idx;
-}
-
-template <typename DataType, typename Compare>
 typename Tree<DataType, Compare>::iterator &
 Tree<DataType, Compare>::iterator::operator=(const iterator &other)
 {
@@ -186,9 +179,9 @@ Tree<DataType, Compare>::iterator::operator++(int unused)  // post-increment
 template <typename DataType, typename Compare>
 Node<DataType>* Tree<DataType, Compare>::iterator::get_leftmost(Node<DataType>* cur)
 {
-    if (cur_point->left == nullptr)
+    if (cur->left == nullptr)
     {
-        return cur_point;
+        return cur;
     }
     return get_leftmost(cur->left);
 }
@@ -196,9 +189,9 @@ Node<DataType>* Tree<DataType, Compare>::iterator::get_leftmost(Node<DataType>* 
 template <typename DataType, typename Compare>
 Node<DataType>* Tree<DataType, Compare>::iterator::get_rightmost(Node<DataType>* cur)
 {
-    if (cur_point->left == nullptr)
+    if (cur->right== nullptr)
     {
-        return cur_point;
+        return cur;
     }
     return get_leftmost(cur->left);
 }

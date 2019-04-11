@@ -10,16 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8a19318-1b11-4d8b-a8ee-c2bcb598f151" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csce221-proj3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tree.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TreeIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TreeIterator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UTEST_Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UTEST_Tree.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +33,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1001">
+              <caret line="429" column="1" selection-start-line="429" selection-start-column="1" selection-end-line="429" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -136,12 +140,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554945249868</updated>
       <workItem from="1554945252248" duration="566000" />
-      <workItem from="1554945837580" duration="927000" />
+      <workItem from="1554945837580" duration="1547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1493000" />
+    <option name="totallyTimeSpent" value="2113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -154,6 +158,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24716553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -180,18 +185,18 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/driver.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Tree.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="-1001">
+          <caret line="429" column="1" selection-start-line="429" selection-start-column="1" selection-end-line="429" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

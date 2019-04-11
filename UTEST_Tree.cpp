@@ -21,12 +21,13 @@ int main()
 
     for (int i=1; i<15; ++i)
     {
-        std::cout << "inserting: " << i << std::endl;
+        // std::cout << "inserting: " << i << std::endl;
         nt.insert(i);
         //nt.debug_print();  // total heap usage: 32 allocs, 32 frees, 78,240 bytes allocated
     }
 
-    for (Tree<int, IntCompare>::iterator it=nt.begin; it!=nt.end(); ++it)
+    Tree<int, IntCompare>::iterator it;
+    for (it=nt.begin(); it!=nt.end(); ++it)
     {
         std::cout << "elem: " << *it << std::endl;
     }
