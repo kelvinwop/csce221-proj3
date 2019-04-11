@@ -113,8 +113,6 @@ void Tree<DataType, Compare>::dp_internal(Node<DataType>* cur, int level)
 template <typename DataType, typename Compare>
 void Tree<DataType, Compare>::insert(Node<DataType>* ins_pt, DataType ins_val)
 {
-    // TODO: before inserts, check if nullptr and create a node if it is nullptr
-    // TODO: set childtype
     // inserting into root node
     if (ins_pt->left == nullptr && ins_pt->middle == nullptr && ins_pt->right == nullptr)
     {
@@ -195,7 +193,7 @@ template <typename DataType, typename Compare>
 void Tree<DataType, Compare>::insert_up(Node<DataType>* ins_pt, Node<DataType>* inserting)
 {
     // leaf with one key on first run, branches after
-    if (ins_pt->keys == 1)  // TODO: add cases for insertion into one key (remember delete)
+    if (ins_pt->keys == 1)
     {
         if (Compare()(inserting->value1, ins_pt->value1))  // if inserted value is less than current (ins left)
         {
@@ -409,7 +407,6 @@ bool Tree<DataType, Compare>::empty() const
 template <typename DataType, typename Compare>
 size_t Tree<DataType, Compare>::size() const
 {
-    /* Your code here... */    
     return tree_size;
 }
 
@@ -489,8 +486,49 @@ template <typename DataType, typename Compare>
 std::ostream &operator<<(std::ostream &stream,
                          const Tree<DataType, Compare> &tree)
 {
-    /* Your code here... */
+    Tree<DataType, Compare>::internal_ophelper(stream, tree.root, 0);
     return stream;
+}
+
+template <typename DataType, typename Compare>
+void Tree<DataType, Compare>::internal_ophelper(std::ostream &stream, Node<DataType>* cur, int level)
+{
+    for (int i=0; i<level; ++i)
+    {
+        stream << "    ";
+    }
+    if (cur == nullptr)
+    {
+        stream << "NULL" << std::endl;
+        return;
+    }
+    if (cur->keys == 1)
+    {
+        std::cout << "childtype: " << cur->child_type << ", value: " << cur->value1 << ", parent: ";
+        if (cur->parent == nullptr)
+        {
+            stream << "NULL" << std::endl;
+        }
+        else
+        {
+            stream << cur->parent->value1 << std::endl;
+        }
+    }
+    else if (cur->keys == 2)
+    {
+        std::cout << "childtype: " << cur->child_type << ", value1: " << cur->value1 << ", value2: " << cur->value2 << ", parent: ";
+        if (cur->parent == nullptr)
+        {
+            stream << "NULL" << std::endl;
+        }
+        else
+        {
+            stream << cur->parent->value1 << std::endl;
+        }
+    }
+    Tree<DataType, Compare>::internal_ophelper(stream, cur->left, level + 1);
+    Tree<DataType, Compare>::internal_ophelper(stream, cur->middle, level + 1);
+    Tree<DataType, Compare>::internal_ophelper(stream, cur->right, level + 1);
 }
 
 template <typename DataType, typename Compare>

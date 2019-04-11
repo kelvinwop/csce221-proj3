@@ -35,6 +35,4 @@ int main()
     {
         std::cout << "elem: " << *it << std::endl;
     }
-
-    std::for_each(titleIndex.begin(), titleIndex.end(), printSong);
 }

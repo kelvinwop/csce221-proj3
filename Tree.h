@@ -85,15 +85,16 @@ public:
     friend std::ostream &operator<<(std::ostream &stream,
                                     const Tree<DataType_, Compare_> &tree);
 
+    static void internal_ophelper(std::ostream &stream, Node<DataType>* cur, int level);
     Node<DataType> copy_node(Node<DataType>* other, Node<DataType>* parent);
     void delete_node(Node<DataType>* other);
     void insert(Node<DataType>* ins_pt, DataType ins_val);
     void debug_print();
     void dp_internal(Node<DataType>* cur, int level);
     void insert_up(Node<DataType>* ins_pt, Node<DataType>* inserting);
+    Node<DataType>* root;
 
 protected:
-    Node<DataType>* root;
     int tree_size;
 };
 
