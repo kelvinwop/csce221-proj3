@@ -52,8 +52,16 @@ int main(int argc, char **argv)
 #endif
 
     /* In order printing */
+    /*
     std::for_each(titleIndex.begin(), titleIndex.end(), printSong);
     std::cout << std::endl;
+    */
+
+    Tree<Song*, TitleCompare>::iterator it;
+    for (it=titleIndex.begin(); it!=titleIndex.end(); ++it)
+    {
+        std::cout << "elem: " << *it << std::endl;
+    }
 
     return 0;
 }

@@ -262,27 +262,28 @@ void Tree<DataType, Compare>::insert_up(Node<DataType>* ins_pt, Node<DataType>* 
     // leaf with two keys on first run, branches after
     else if (ins_pt->keys == 2)
     {
-        //DataType smol;
+        DataType smol;
         DataType med;
         DataType big;
         if (Compare()(inserting->value1, ins_pt->value1))  // if inserted value is less than current1 (ins left)
         {
-            //smol = inserting->value1;
+            smol = inserting->value1;
             med = ins_pt->value1;
             big = ins_pt->value2;
         }
         else if (Compare()(inserting->value1, ins_pt->value1))  // if inserted value is less than current2 (ins middle)
         {
-            //smol = ins_pt->value1;
+            smol = ins_pt->value1;
             med = inserting->value1;
             big = ins_pt->value2;
         }
         else  // if inserted value is greater than or equal to current (ins right)
         {
-            //smol = ins_pt->value1;
+            smol = ins_pt->value1;
             med = ins_pt->value2;
             big = inserting->value1;
         }
+        ins_pt->value1 = smol;
 
         Node<DataType>* child1;
         Node<DataType>* child2;
