@@ -11,7 +11,7 @@
 #include "TitleCompare.h"
 
 #define EXPECTED_ARGC 2
-#define DEBUG 1
+#define DEBUG
 
 /* Print the given song to stdout */
 void printSong(Song *song)
@@ -21,14 +21,21 @@ void printSong(Song *song)
 
 int main(int argc, char **argv)
 {
+
+    #ifndef DEBUG
     if (argc != EXPECTED_ARGC)
     {
         std::cerr << "Usage: " << argv[0] << " <library-path>" << std::endl;
         return 1;
     }
-
     /* Read in the library */
     Library library(argv[1]);
+    #endif
+
+    #ifdef DEBUG
+    Library library("samplelib.txt");
+    #endif
+    
     Tree<Song *, TitleCompare> titleIndex;
 
     /* Populate the indexes */

@@ -86,7 +86,11 @@ public:
                                     const Tree<DataType_, Compare_> &tree);
 
     Node<DataType> copy_node(Node<DataType>* other, Node<DataType>* parent);
-    void Tree<DataType, Compare>::delete_node(Node<DataType>* other);
+    void delete_node(Node<DataType>* other);
+    void insert(Node<DataType>* ins_pt, DataType ins_val);
+    void debug_print();
+    void dp_internal(Node<DataType>* cur, int level);
+    void insert_up(Node<DataType>* ins_pt, Node<DataType>* inserting);
 
 protected:
     Node<DataType>* root;
@@ -104,6 +108,9 @@ public:
 
     /* Copy constructor */
     iterator(const iterator &other);
+
+    // very very bad i think
+    iterator(Node<DataType>* elem, int idx);
 
     /* Copy assignment */
     iterator &operator=(const iterator &other);
@@ -123,9 +130,14 @@ public:
     /* Advance to the current data's successor */
     iterator operator++(int unused);
 
+    iterator &endify();
+    iterator &startify();
+    iterator &lastify();
 protected:
     Node<DataType>* cur_point;
     int key_num;
+    Node<DataType>* get_leftmost(Node<DataType>* cur);
+    Node<DataType>* get_rightmost(Node<DataType>* cur);
 };
 
 #include "Tree.cpp"
