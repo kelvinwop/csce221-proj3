@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     #endif
 
     #ifdef DEBUG
-    Library library("samplelib.txt");
+    Library library("library.txt");
     #endif
     
     Tree<Song *, TitleCompare> titleIndex;

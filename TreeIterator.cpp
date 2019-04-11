@@ -58,6 +58,10 @@ DataType Tree<DataType, Compare>::iterator::operator*() const
         std::cout << "*() nonnull" << std::endl;
     }
     #endif
+    if (this->cur_point == nullptr)
+    {
+        throw std::runtime_error("Iterator: Cannot deference END");
+    }
     if (this->key_num == 1)
     {
         return this->cur_point->value1;
