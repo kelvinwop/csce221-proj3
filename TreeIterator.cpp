@@ -1,8 +1,10 @@
 #include "Tree.h"
 #include <stdexcept>
+#include <iostream>
 
 #ifndef TREE_ITERATOR_CPP
 #define TREE_ITERATOR_CPP
+// #define DEBUG
 
 template <typename DataType, typename Compare>
 Tree<DataType, Compare>::iterator::iterator()
@@ -30,18 +32,32 @@ Tree<DataType, Compare>::iterator::operator=(const iterator &other)
 template <typename DataType, typename Compare>
 bool Tree<DataType, Compare>::iterator::operator==(const iterator &other) const
 {
+    if (this->cur_point == nullptr && other.cur_point == nullptr)
+    {
+        return true;
+    }
     return this->cur_point == other.cur_point && this->key_num == other.key_num;
 }
 
 template <typename DataType, typename Compare>
 bool Tree<DataType, Compare>::iterator::operator!=(const iterator &other) const
 {
-    return this->cur_point != other.cur_point || this->key_num != other.key_num;
+    return !(*this == other);
 }
 
 template <typename DataType, typename Compare>
 DataType Tree<DataType, Compare>::iterator::operator*() const
 {
+    #ifdef DEBUG
+    if (this->cur_point == nullptr)
+    {
+        std::cout << "*() op NULL" << std::endl;
+    }
+    else
+    {
+        std::cout << "*() nonnull" << std::endl;
+    }
+    #endif
     if (this->key_num == 1)
     {
         return this->cur_point->value1;
@@ -62,9 +78,15 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
 {
     if (this->cur_point != nullptr)
     {
+        #ifdef DEBUG
+        std::cout << "iterator is not at the end" << std::endl;
+        #endif
         // case 1, 2
         if (this->cur_point->keys == 1)  // two-tree
         {
+            #ifdef DEBUG
+            std::cout << "this is a one key node" << std::endl;
+            #endif
             if (key_num == 2)
             {
                 throw std::runtime_error("ASSUMPTIONS BROKEN: key_num must be 1 here");
@@ -72,6 +94,9 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
             // case 1
             if (this->cur_point->right != nullptr)
             {
+                #ifdef DEBUG
+                std::cout << "this node has a right branch... getting leftmost on right branch" << std::endl;
+                #endif
                 this->cur_point = get_leftmost(this->cur_point->right);
                 return *this;
             }
@@ -79,14 +104,23 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
             // case 2
             while (this->cur_point->parent != nullptr)
             {
+                #ifdef DEBUG
+                std::cout << "this node has a parent" << std::endl;
+                #endif
                 if (this->cur_point->child_type == -1)  // is a left child
                 {
+                    #ifdef DEBUG
+                    std::cout << "this node is a left child (no right branch), traversing up" << std::endl;
+                    #endif
                     this->cur_point = this->cur_point->parent;
-                    // smaller in parent so key stays 1
+                    // smaller in parent so key stays 1 (going to left parent)
                     return *this;
                 }
                 else if (this->cur_point->child_type == 0)  // middle child
                 {
+                    #ifdef DEBUG
+                    std::cout << "this node is a middle child, traversing up" << std::endl;
+                    #endif
                     this->cur_point = this->cur_point->parent;
                     key_num = 2;
                     return *this;
@@ -102,11 +136,20 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
         // case 3, 4, 5, 6
         else if (this->cur_point->keys == 2)  // three-tree
         {
+            #ifdef DEBUG
+            std::cout << "this node has two key values" << std::endl;
+            #endif
             if (key_num == 1)
             {
+                #ifdef DEBUG
+                std::cout << "currently on smaller of two keys" << std::endl;
+                #endif
                 // case 3
                 if (this->cur_point->middle != nullptr)
                 {
+                    #ifdef DEBUG
+                    std::cout << "traversing down the central branch" << std::endl;
+                    #endif
                     this->cur_point = get_leftmost(this->cur_point->middle);
                     // smallest so key stays 1
                     return *this;
@@ -115,6 +158,9 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
                 // case 5
                 else
                 {
+                    #ifdef DEBUG
+                    std::cout << "this node has no central branch" << std::endl;
+                    #endif
                     key_num = 2;
                     return *this;
                 }
@@ -124,6 +170,9 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
                 // case 4
                 if (this->cur_point->right != nullptr)
                 {
+                    #ifdef DEBUG
+                    std::cout << "a right subtree exists... getting left most on right branch" << std::endl;
+                    #endif
                     this->cur_point = get_leftmost(this->cur_point->right);
                     key_num = 1;
                     return *this;
@@ -132,14 +181,23 @@ Tree<DataType, Compare>::iterator::operator++()  // pre-increment
                 // case 6
                 while (this->cur_point->parent != nullptr)
                 {
+                    #ifdef DEBUG
+                    std::cout << "this node has a parent" << std::endl;
+                    #endif
                     if (this->cur_point->child_type == -1)  // is a left child
                     {
+                        #ifdef DEBUG
+                        std::cout << "this node is a left child, traversing up" << std::endl;
+                        #endif
                         this->cur_point = this->cur_point->parent;
                         key_num = 1;
                         return *this;
                     }
                     else if (this->cur_point->child_type == 0)  // middle child
                     {
+                        #ifdef DEBUG
+                        std::cout << "this node is a middle child, traversing up" << std::endl;
+                        #endif
                         this->cur_point = this->cur_point->parent;
                         // larger in parent so key stays 2
                         return *this;

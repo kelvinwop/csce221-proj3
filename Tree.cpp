@@ -363,6 +363,10 @@ void Tree<DataType, Compare>::insert_up(Node<DataType>* ins_pt, Node<DataType>* 
             child2->parent = ins_pt;
             child3->parent = RHS;
             child4->parent = RHS;
+            child1->child_type = -1;
+            child2->child_type = 1;
+            child3->child_type = -1;
+            child4->child_type = 1;
         }
 
         ins_pt->middle = nullptr;

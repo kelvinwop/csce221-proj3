@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8a19318-1b11-4d8b-a8ee-c2bcb598f151" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TreeIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TreeIterator.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UTEST_Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UTEST_Tree.cpp" afterDir="false" />
     </list>
@@ -36,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/Tree.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1001">
-              <caret line="429" column="1" selection-start-line="429" selection-start-column="1" selection-end-line="429" selection-end-column="1" />
+              <caret line="430" column="1" selection-start-line="430" selection-start-column="1" selection-end-line="430" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -194,7 +191,7 @@
     <entry file="file://$PROJECT_DIR$/Tree.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1001">
-          <caret line="429" column="1" selection-start-line="429" selection-start-column="1" selection-end-line="429" selection-end-column="1" />
+          <caret line="430" column="1" selection-start-line="430" selection-start-column="1" selection-end-line="430" selection-end-column="1" />
         </state>
       </provider>
     </entry>
