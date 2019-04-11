@@ -9,6 +9,10 @@
 #include "Song.h"
 #include "Tree.h"
 #include "TitleCompare.h"
+#include "YearCompare.h"
+#include "ArtistCompare.h"
+#include "GenreCompare.h"
+#include "AlbumCompare.h"
 
 #define EXPECTED_ARGC 2
 #define DEBUG
@@ -36,7 +40,7 @@ int main(int argc, char **argv)
     Library library("library.txt");
     #endif
     
-    Tree<Song *, TitleCompare> titleIndex;
+    Tree<Song *, YearCompare> titleIndex;
 
     /* Populate the indexes */
     for (Library::const_iterator iter = library.begin(); 
@@ -48,7 +52,7 @@ int main(int argc, char **argv)
 
 #ifdef DEBUG
     /* Level order printing */
-    std::cout << titleIndex << '\n' << std::endl;
+    // std::cout << titleIndex << '\n' << std::endl;
 #endif
 
     /* In order printing */

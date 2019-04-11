@@ -1,7 +1,6 @@
 #include "TitleCompare.h"
 #include <iostream>
 
-#define DEBUG
 
 bool TitleCompare::operator()(const Song *a, const Song *b)
 {
