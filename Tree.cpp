@@ -168,7 +168,7 @@ void Tree<DataType, Compare>::insert(Node<DataType>* ins_pt, DataType ins_val)
             insert(ins_pt->left, ins_val);
             return;
         }
-        else if (Compare()(ins_val, ins_pt->value1))  // if inserted value is less than current2 (ins middle)
+        else if (Compare()(ins_val, ins_pt->value2))  // if inserted value is less than current2 (ins middle)
         {
             insert(ins_pt->middle, ins_val);
             return;
@@ -269,7 +269,7 @@ void Tree<DataType, Compare>::insert_up(Node<DataType>* ins_pt, Node<DataType>* 
             med = ins_pt->value1;
             big = ins_pt->value2;
         }
-        else if (Compare()(inserting->value1, ins_pt->value1))  // if inserted value is less than current2 (ins middle)
+        else if (Compare()(inserting->value1, ins_pt->value2))  // if inserted value is less than current2 (ins middle)
         {
             smol = ins_pt->value1;
             med = inserting->value1;
@@ -281,6 +281,10 @@ void Tree<DataType, Compare>::insert_up(Node<DataType>* ins_pt, Node<DataType>* 
             med = ins_pt->value2;
             big = inserting->value1;
         }
+#ifdef DEBUG
+        std::cout << "v1: " << ins_pt->value1 << ", v2: " << ins_pt->value2 << ", ins: " << inserting->value1 << std::endl;
+        std::cout << "s: " << smol << ", m: " << med << ", b: " << big << std::endl;
+#endif
         ins_pt->value1 = smol;
 
         Node<DataType>* child1;

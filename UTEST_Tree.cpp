@@ -2,6 +2,7 @@
 #include "IntCompare.h"
 #include <stdexcept>
 #include <iostream>
+#include <time.h>
 
 
 int main()
@@ -18,14 +19,23 @@ int main()
 
     // Tree tests =========================================
     Tree<int, IntCompare> nt;
-    int bound = 100;
+    srand(time(NULL));
+    int randint;
 
-    for (int i=7; i>0; --i)
+    for (int i=100; i>0; --i)
     {
-        std::cout << "inserting: " << i << std::endl;
-        nt.insert(i);
-        nt.insert(bound -i);
+        randint = rand() % 35 + 1;
+        std::cout << "inserting: " << randint << std::endl;
+        nt.insert(randint);
         nt.debug_print();  // total heap usage: 32 allocs, 32 frees, 78,240 bytes allocated
+
+        std::cout << "ord: ";
+        Tree<int, IntCompare>::iterator it;
+        for (it=nt.begin(); it!=nt.end(); ++it)
+        {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
     }
 
     // nt.debug_print();

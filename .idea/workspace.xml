@@ -10,17 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8a19318-1b11-4d8b-a8ee-c2bcb598f151" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AlbumCompare.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbumCompare.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArtistCompare.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArtistCompare.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenreCompare.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenreCompare.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YearCompare.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YearCompare.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArtistCompare.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ArtistCompare.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TitleCompare.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TitleCompare.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Song.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Song.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UTEST_Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UTEST_Tree.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/driver.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,46 +30,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/driver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="68">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#383#576#0" expanded="true" />
+                <element signature="e#699#730#0" expanded="true" />
+                <element signature="e#994#1073#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AlbumCompare.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-              <folding>
-                <element signature="e#169#275#0" expanded="true" />
-                <element signature="e#422#529#0" expanded="true" />
-                <element signature="e#676#782#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Song.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ArtistCompare.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,8 +46,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="384">
+              <caret line="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlbumCompare.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding>
+                <element signature="e#168#274#0" expanded="true" />
+                <element signature="e#421#528#0" expanded="true" />
+                <element signature="e#675#781#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Song.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ArtistCompare.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding>
+                <element signature="e#187#297#0" expanded="true" />
+                <element signature="e#448#559#0" expanded="true" />
+                <element signature="e#710#820#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GenreCompare.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <element signature="e#169#275#0" expanded="true" />
+                <element signature="e#422#529#0" expanded="true" />
+                <element signature="e#676#782#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,6 +115,7 @@
       <find>med</find>
       <find>todo</find>
       <find>Title</find>
+      <find>#define DEBUG</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -115,20 +132,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TreeIterator.cpp" />
-        <option value="$PROJECT_DIR$/UTEST_Tree.cpp" />
         <option value="$PROJECT_DIR$/Tree.h" />
-        <option value="$PROJECT_DIR$/Tree.cpp" />
         <option value="$PROJECT_DIR$/ArtistCompare.h" />
         <option value="$PROJECT_DIR$/AlbumCompare.h" />
         <option value="$PROJECT_DIR$/GenreCompare.h" />
         <option value="$PROJECT_DIR$/TitleCompare.cpp" />
         <option value="$PROJECT_DIR$/GenreCompare.cpp" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/YearCompare.cpp" />
         <option value="$PROJECT_DIR$/YearCompare.h" />
-        <option value="$PROJECT_DIR$/AlbumCompare.cpp" />
-        <option value="$PROJECT_DIR$/ArtistCompare.cpp" />
+        <option value="$PROJECT_DIR$/Tree.cpp" />
+        <option value="$PROJECT_DIR$/UTEST_Tree.cpp" />
+        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/driver.cpp" />
+        <option value="$PROJECT_DIR$/AlbumCompare.cpp" />
+        <option value="$PROJECT_DIR$/Song.cpp" />
+        <option value="$PROJECT_DIR$/ArtistCompare.cpp" />
       </list>
     </option>
   </component>
@@ -222,12 +240,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554945249868</updated>
       <workItem from="1554945252248" duration="566000" />
-      <workItem from="1554945837580" duration="13320000" />
+      <workItem from="1554945837580" duration="15843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13886000" />
+    <option name="totallyTimeSpent" value="16409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -254,7 +272,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49962208" weight="0.32980132" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49962208" weight="0.32980132" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49962208" visible="true" weight="0.33245033" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49962208" visible="true" weight="0.5417219" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50037795" side_tool="true" weight="0.29403973" />
       <window_info anchor="right" id="make" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -307,27 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tree.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UTEST_Tree.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlbumCompare.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GenreCompare.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -349,19 +346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GenreCompare.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#169#275#0" expanded="true" />
-            <element signature="e#422#529#0" expanded="true" />
-            <element signature="e#676#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="file://$PROJECT_DIR$/Makefile_old">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
@@ -370,13 +355,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Node.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Song.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TitleCompare.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -402,29 +380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArtistCompare.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YearCompare.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlbumCompare.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="e#169#275#0" expanded="true" />
-            <element signature="e#422#529#0" expanded="true" />
-            <element signature="e#676#782#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,12 +394,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="170" column="50" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UTEST_Tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenreCompare.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#169#275#0" expanded="true" />
+            <element signature="e#422#529#0" expanded="true" />
+            <element signature="e#676#782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/driver.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="68">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#383#576#0" expanded="true" />
+            <element signature="e#699#730#0" expanded="true" />
+            <element signature="e#994#1073#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlbumCompare.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlbumCompare.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#168#274#0" expanded="true" />
+            <element signature="e#421#528#0" expanded="true" />
+            <element signature="e#675#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Song.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArtistCompare.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#187#297#0" expanded="true" />
+            <element signature="e#448#559#0" expanded="true" />
+            <element signature="e#710#820#0" expanded="true" />
           </folding>
         </state>
       </provider>

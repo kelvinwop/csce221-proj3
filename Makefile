@@ -1,39 +1,28 @@
-output.out: driver.o Library.o Song.o Tree.o TitleCompare.o AlbumCompare.o ArtistCompare.o GenreCompare.o YearCompare.o
-	g++ -Wall -g -std=c++11 driver.o Library.o Song.o Tree.o TitleCompare.o AlbumCompare.o ArtistCompare.o GenreCompare.o YearCompare.o -o output.out
+LD = $(shell which g++)
+CXX = $(shell which g++)
 
-Library.o: Library.cpp Library.h
-	g++ -Wall -g -std=c++11 -c Library.cpp
+override CXXFLAGS += -Wall
 
-Song.o: Song.cpp Song.h
-	g++ -Wall -g -std=c++11 -c Song.cpp
+EXE = Project3.out
+OBJS = driver.o Song.o Library.o TitleCompare.o AlbumCompare.o ArtistCompare.o GenreCompare.o YearCompare.o
 
-TitleCompare.o: TitleCompare.cpp TitleCompare.h
-	g++ -Wall -g -std=c++11 -c TitleCompare.cpp
+DEPS = $(addprefix.,$(OBJS:.o=.d))
 
-Tree.o: Tree.cpp Tree.h TreeIterator.cpp
-	g++ -Wall -g -std=c++11 -c Tree.cpp
+$(EXE): $(DEPS) $(OBJS)
+	$(LD) $(LDFLAGS) $(LDLIBS) $(OBJS) -o $@
 
-TreeIterator.o: TreeIterator.cpp TreeIterator.h
-	g++ -Wall -g -std=c++11 -c TreeIterator.cpp
+.%.d: %.cpp
+	@$(RM) $@; \
+	$(CXX) -MM -MF $@ -MT "$(<:.cpp=.o) $@" -c $(CPPFLAGS) $<
 
-AlbumCompare.o: AlbumCompare.cpp AlbumCompare.h
-	g++ -Wall -g -std=c++11 -c AlbumCompare.cpp
+$(OBJS): %.o: %.cpp
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
-ArtistCompare.o: ArtistCompare.cpp ArtistCompare.h
-	g++ -Wall -g -std=c++11 -c ArtistCompare.cpp
+-include $(DEPS)
 
-GenreCompare.o: GenreCompare.cpp GenreCompare.h
-	g++ -Wall -g -std=c++11 -c GenreCompare.cpp
-
-YearCompare.o: YearCompare.cpp YearCompare.h
-	g++ -Wall -g -std=c++11 -c YearCompare.cpp
-
-driver.o: driver.cpp Library.h Song.h TitleCompare.h Tree.h AlbumCompare.h ArtistCompare.h GenreCompare.h YearCompare.h
-	g++ -Wall -g -std=c++11 -c driver.cpp
-
+.PHONY: clean
 clean:
-	rm -rf *.o
-	rm -f *.out
-
-run:
-	./output.out ${LIBRARYFILE}
+	$(RM) $(OBJS) $(DEPS) $(EXE)
+.PHONY: run
+run: $(EXE)
+	./$(EXE) $(LIBRARY_FILE)

@@ -15,7 +15,6 @@
 #include "AlbumCompare.h"
 
 #define EXPECTED_ARGC 2
-#define DEBUG
 
 /* Print the given song to stdout */
 void printSong(Song *song)
@@ -40,7 +39,7 @@ int main(int argc, char **argv)
     Library library("library.txt");
     #endif
     
-    Tree<Song *, YearCompare> titleIndex;
+    Tree<Song *, AlbumCompare> titleIndex;
 
     /* Populate the indexes */
     for (Library::const_iterator iter = library.begin(); 

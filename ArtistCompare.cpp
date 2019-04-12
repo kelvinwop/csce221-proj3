@@ -5,7 +5,7 @@
 #include "ArtistCompare.h"
 #include <iostream>
 
-#define DEBUG
+// #define DEBUG
 
 bool ArtistCompare::operator()(const Song *a, const Song *b)
 {

@@ -9,7 +9,7 @@
 #define KEY_NAME_CHARS 64
 #define VALUE_CHARS 256
 #define KEY_DELIMITER ' '
-#define DEBUG
+// #define DEBUG
 
 /* Read an arbitrary value from the input stream */
 static void readValue(std::istream &stream, 
